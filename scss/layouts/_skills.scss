@@ -1,0 +1,59 @@
+@use '../tools/variables' as var;
+@use '../tools/mixins' as mix;
+
+.skills{
+    @include mix.layout-altura();
+    .skills-content{
+        
+        .skills-title{
+            @include mix.layout-text();
+        }
+        .skills-info{
+
+            max-width: 1170px;
+            margin: auto;
+            position: relative;
+            .swiper-container {
+                width: 1000px;
+                .info{
+                    @include mix.info-centrado();
+                    
+                    .imagen img{
+                        padding-top: 30px;
+                        width: 100%;
+                        height: 100px;
+                    }
+                
+                    .title{
+                        color: var.$black;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.swiper-button-prev {
+    color: var.$secundario !important;
+}
+
+
+.swiper-button-next {
+    color: var.$secundario !important;
+}
+
+.swiper-button-prev:after, .swiper-container-rtl .swiper-button-next:after {
+    content: none !important;
+}
+  
+.swiper-button-next::after, .swiper-container-rtl .swiper-button-prev::after {
+    content: none !important;
+}
+
+#js-prev1:active{
+    opacity: 50%;
+}
+
+#js-next1:active{
+    opacity: 50%;
+}
